@@ -5,17 +5,16 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
-from PyQt5 import Qt
-
-from planet import Planet
+from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
+import qdarkstyle
+
 
 
 class Ui_Dialog(object):
 
-
-    def setupUi(self, Dialog):
+    def __init__(self):
         self.solar_system = {
             "erde": {"name": "Erde", "mass": "123451", "radius": "2345", "distance": "24"},
             "merkur": {"name": "Merkur", "mass": "123451", "radius": "2345", "distance": "24"},
@@ -28,17 +27,17 @@ class Ui_Dialog(object):
         }
         self.all_planets = []
 
-
+    def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(701, 686)
-        Dialog.setWindowIcon(QIcon("planet_icon.jpg"))
+        Dialog.setWindowIcon(QIcon("planet_icon.png"))
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(320, 640, 341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel | QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.planets_comboBox = QtWidgets.QComboBox(Dialog)
-        self.planets_comboBox.setGeometry(QtCore.QRect(350, 110, 339, 20))
+        self.planets_comboBox.setGeometry(QtCore.QRect(350, 110, 339, 25))
         self.planets_comboBox.setObjectName("planets_comboBox")
         self.planets_comboBox.addItem("")
         self.planets_comboBox.addItem("")
@@ -49,7 +48,7 @@ class Ui_Dialog(object):
         self.planets_comboBox.addItem("")
         self.planets_comboBox.addItem("")
         self.add_planet_btn = QtWidgets.QPushButton(Dialog)
-        self.add_planet_btn.setGeometry(QtCore.QRect(350, 140, 75, 23))
+        self.add_planet_btn.setGeometry(QtCore.QRect(350, 140, 75, 29))
         self.add_planet_btn.setObjectName("add_planet_btn")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(Dialog)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(350, 220, 71, 101))
@@ -73,11 +72,11 @@ class Ui_Dialog(object):
         self.add_planet_label.setGeometry(QtCore.QRect(350, 90, 339, 19))
         self.add_planet_label.setObjectName("add_planet_label")
         self.add_usr_planet_btn = QtWidgets.QPushButton(Dialog)
-        self.add_usr_planet_btn.setGeometry(QtCore.QRect(350, 350, 75, 23))
+        self.add_usr_planet_btn.setGeometry(QtCore.QRect(350, 350, 75, 28))
         self.add_usr_planet_btn.setObjectName("add_usr_planet_btn")
 
         self.remove_planet_btn = QtWidgets.QPushButton(Dialog)
-        self.remove_planet_btn.setGeometry(QtCore.QRect(475, 350, 75, 23))
+        self.remove_planet_btn.setGeometry(QtCore.QRect(475, 350, 75, 28))
         self.remove_planet_btn.setObjectName("remove_usr_planet_btn")
 
         self.user_planet_label = QtWidgets.QLabel(Dialog)
@@ -89,22 +88,23 @@ class Ui_Dialog(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.mass_le_3 = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.mass_le_3.setObjectName("mass_le_3")
-        self.verticalLayout.addWidget(self.mass_le_3)
-        self.radius_le_3 = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.radius_le_3.setObjectName("radius_le_3")
-        self.verticalLayout.addWidget(self.radius_le_3)
-        self.dist_le_3 = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.dist_le_3.setObjectName("dist_le_3")
-        self.verticalLayout.addWidget(self.dist_le_3)
-        self.name_le_3 = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.name_le_3.setObjectName("name_le_3")
-        self.verticalLayout.addWidget(self.name_le_3)
+        self.mass_le = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.mass_le.setObjectName("mass_le_3")
+        self.verticalLayout.addWidget(self.mass_le)
+        self.radius_le = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.radius_le.setObjectName("radius_le_3")
+        self.verticalLayout.addWidget(self.radius_le)
+        self.dist_le = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.dist_le.setObjectName("dist_le_3")
+        self.verticalLayout.addWidget(self.dist_le)
+        self.name_le = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.name_le.setObjectName("name_le_3")
+        self.verticalLayout.addWidget(self.name_le)
         self.listWidget = QtWidgets.QListWidget(Dialog)
         self.listWidget.setGeometry(QtCore.QRect(50, 100, 256, 271))
         self.listWidget.setObjectName("listWidget")
 
+        # Method sets every button an Button event
         self.set_btn_events()
 
         self.retranslateUi(Dialog)
@@ -144,34 +144,33 @@ class Ui_Dialog(object):
     def add_planet(self):
         combo_box_in = str(self.planets_comboBox.currentText())
         planet = self.solar_system[combo_box_in.lower()]
-        output = "Name: {}\t Masse: {}, Distanz: {}, Radius: {}".format(planet["name"], planet["mass"],
-                                                                     planet["distance"], planet["radius"])
-        self.all_planets.append(planet)
-        print(self.all_planets)
-        self.listWidget.addItem(output)
+        self.set_output(planet)
 
     def add_usr_planet(self):
         if self.all_fields_placed():
             planet ={}
-            mass = str(self.mass_le_3.text())
+            mass = str(self.mass_le.text())
             planet["mass"] = mass
-            dist = str(self.dist_le_3.text())
+            dist = str(self.dist_le.text())
             planet["distance"] = dist
-            radius = str(self.radius_le_3.text())
+            radius = str(self.radius_le.text())
             planet["radius"] = radius
-            name = str(self.name_le_3.text())
+            name = str(self.name_le.text())
             if not name:
                 name = "None"
             planet["name"] = name
-            output = "Name: {}\t Masse:{}, Distanz:{}, Radius: {}".format(planet["name"], planet["mass"], planet["distance"], planet["radius"])
+            self.set_output(planet)
+            self.set_blank()
 
-            self.all_planets.append(planet)
-            print(self.all_planets)
-            item = QtWidgets.QListWidgetItem(output)
-            self.listWidget.addItem(item)
+    def set_output(self, planet):
+        output = "Name: {}\t Masse:{}, Distanz:{}, Radius: {}".format(planet["name"], planet["mass"],
+                                                                      planet["distance"], planet["radius"])
+        self.all_planets.append(planet)
+        print(self.all_planets)
+        self.listWidget.addItem(output)
 
     def all_fields_placed(self):
-        all_le = [self.dist_le_3, self.mass_le_3, self.radius_le_3]
+        all_le = [self.dist_le, self.mass_le, self.radius_le]
         for le in all_le:
             try:
                 int(le.text())
@@ -181,18 +180,28 @@ class Ui_Dialog(object):
 
     def remove_planet(self):
         i = self.listWidget.currentRow()
+        if i < 0:
+            return
         self.listWidget.takeItem(self.listWidget.currentRow())
         del self.all_planets[i]
         print(self.all_planets)
+
+    def set_blank(self):
+        self.mass_le.setText("")
+        self.dist_le.setText("")
+        self.name_le.setText("")
+        self.radius_le.setText("")
 
 
 if __name__ == '__main__':
     import sys
 
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
+    Dialog.setWindowTitle("Simulation Configuration")
     Dialog.show()
     sys.exit(app.exec())
 
