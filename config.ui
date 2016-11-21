@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Simulation Configuration</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
@@ -29,188 +32,271 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QComboBox" name="planets_comboBox">
+  <widget class="Line" name="line">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>110</y>
-     <width>339</width>
+     <x>30</x>
+     <y>330</y>
+     <width>661</width>
      <height>20</height>
     </rect>
    </property>
-   <item>
-    <property name="text">
-     <string>Merkur</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Venus</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Erde</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Mars</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Jupiter</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Saturn</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Uranus</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Neptun</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QPushButton" name="add_planet_btn">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>140</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>hinzufügen</string>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget_2">
+  <widget class="QWidget" name="verticalLayoutWidget_6">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>220</y>
-     <width>71</width>
-     <height>101</height>
+     <x>40</x>
+     <y>370</y>
+     <width>295</width>
+     <height>144</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
-     <widget class="QLabel" name="mass_label_3">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Masseschwerpunkt</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Sonne (Masse: 1,989 × 10^30 kg, Radius: 695.700 km)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>Masse</string>
+       <string>Benutzerdefiniert:</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="rad_label_3">
-      <property name="text">
-       <string>Radius</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="mass_label_2">
+          <property name="text">
+           <string>Masse</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="radius_label_2">
+          <property name="text">
+           <string>Radius</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QLabel" name="dist_label_3">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entfernung zum Massemittelpunkt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
+     <widget class="QPushButton" name="add_usr_sun_btn">
       <property name="text">
-       <string>Entfernung</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="name_label_3">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name des Planeten&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string>Name</string>
+       <string>hinzufügen</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="add_planet_label">
+  <widget class="QWidget" name="horizontalLayoutWidget_3">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>90</y>
-     <width>339</width>
-     <height>19</height>
+     <x>30</x>
+     <y>60</y>
+     <width>601</width>
+     <height>251</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Planet hinzügen</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="add_usr_planet_btn">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>350</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>hinzufügen</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="user_planet_label">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>200</y>
-     <width>211</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>benutzerdefinierter Planet:</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>220</y>
-     <width>191</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
     <item>
-     <widget class="QLineEdit" name="mass_le_3"/>
+     <widget class="QListWidget" name="listWidget"/>
     </item>
     <item>
-     <widget class="QLineEdit" name="radius_le_3"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="dist_le_3"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="name_le_3"/>
+     <layout class="QVBoxLayout" name="verticalLayout_9">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="add_planet_label">
+          <property name="text">
+           <string>Planet hinzügen</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="planets_comboBox">
+          <item>
+           <property name="text">
+            <string>Merkur</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Venus</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Erde</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Mars</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jupiter</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Saturn</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Uranus</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Neptun</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="add_planet_btn">
+          <property name="text">
+           <string>hinzufügen</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="mass_label">
+                <property name="text">
+                 <string>Masse</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="rad_label">
+                <property name="text">
+                 <string>Radius</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="dist_label">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entfernung zum Massemittelpunkt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Entfernung</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="name_label">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name des Planeten&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Name</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QLineEdit" name="mass_le"/>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="radius_le"/>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="dist_le"/>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="name_le"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="user_planet_label">
+            <property name="text">
+             <string>benutzerdefinierter Planet:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QPushButton" name="add_usr_planet_btn">
+              <property name="text">
+               <string>hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="remove_planet_btn">
+              <property name="text">
+               <string>entfernen</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QListWidget" name="listWidget">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>256</width>
-     <height>271</height>
-    </rect>
-   </property>
-  </widget>
+  <zorder>buttonBox</zorder>
+  <zorder>line</zorder>
+  <zorder>verticalLayoutWidget_4</zorder>
+  <zorder>label</zorder>
+  <zorder>verticalLayoutWidget_6</zorder>
+  <zorder>horizontalLayoutWidget_3</zorder>
+  <zorder>listWidget</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections>

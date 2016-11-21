@@ -17,9 +17,35 @@
     <SUITE FILE_PATH="coverage/simulation$Naeherungsberechnung_mehrere_Planeten.coverage" NAME="Naeherungsberechnung_mehrere_Planeten Coverage Results" MODIFIED="1478461378538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Dropbox/Studium/prog3/etc/Prog3PraktikumsProjekt-master-b0758daaac17cf6c24c816823a09606d7734e806/Simulation_Himmelskoerper_System/Taylor Naeherungswertberechnung/David" />
     <SUITE FILE_PATH="coverage/simulation$planet.coverage" NAME="planet Coverage Results" MODIFIED="1478465126417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/simulation$config_ui.coverage" NAME="config_ui Coverage Results" MODIFIED="1479688329005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/simulation$ui_config_simulation.coverage" NAME="ui_config_simulation Coverage Results" MODIFIED="1479690591477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="config_ui.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/config_ui.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="906">
+                    <caret line="209" column="0" selection-start-line="138" selection-start-column="3" selection-end-line="209" selection-end-column="0" />
+                    <folding>
+                      <element signature="e#237#266#0" expanded="true" />
+                      <element signature="e#1280#6024#0" expanded="false" />
+                      <element signature="e#6071#7715#0" expanded="false" />
+                      <element signature="e#8702#9015#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -27,16 +53,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config_ui.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config_ui.py">
+      <file leaf-file-name="ui_config_simulation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui_config_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="985">
-              <caret line="169" column="39" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+            <state relative-caret-position="188">
+              <caret line="65" column="17" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="17" />
               <folding>
-                <element signature="e#237#266#0" expanded="true" />
-                <element signature="e#419#1239#0" expanded="false" />
-                <element signature="e#6071#7715#0" expanded="false" />
-                <element signature="e#8702#9015#0" expanded="false" />
+                <element signature="e#237#254#0" expanded="true" />
+                <element signature="e#357#1177#0" expanded="false" />
+                <element signature="e#12790#13103#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,6 +84,7 @@
         <option value="$USER_HOME$/Dropbox/Studium/prog3/etc/Prog3PraktikumsProjekt-master-b0758daaac17cf6c24c816823a09606d7734e806/Simulation_Himmelskoerper_System/Taylor Naeherungswertberechnung/David/Naeherungsberechnung_mehrere_Planeten.py" />
         <option value="$PROJECT_DIR$/planet.py" />
         <option value="$PROJECT_DIR$/config_ui.py" />
+        <option value="$PROJECT_DIR$/ui_config_simulation.py" />
       </list>
     </option>
   </component>
@@ -129,7 +155,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.config_ui">
+  <component name="RunManager" selected="Python.ui_config_simulation">
     <configuration default="false" name="tsp_supa" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -198,6 +224,24 @@
       <module name="simulation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config_ui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ui_config_simulation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simulation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui_config_simulation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -410,18 +454,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.tsp_supa" />
       <item index="1" class="java.lang.String" itemvalue="Python.Naeherungsberechnung_mehrere_Planeten" />
       <item index="2" class="java.lang.String" itemvalue="Python.planet" />
       <item index="3" class="java.lang.String" itemvalue="Python.config_ui" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ui_config_simulation" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.config_ui" />
-        <item index="1" class="java.lang.String" itemvalue="Python.planet" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Naeherungsberechnung_mehrere_Planeten" />
-        <item index="3" class="java.lang.String" itemvalue="Python.tsp_supa" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.ui_config_simulation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.config_ui" />
+        <item index="2" class="java.lang.String" itemvalue="Python.planet" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Naeherungsberechnung_mehrere_Planeten" />
+        <item index="4" class="java.lang.String" itemvalue="Python.tsp_supa" />
       </list>
     </recent_temporary>
   </component>
@@ -478,7 +524,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -499,7 +545,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#237#266#0" expanded="true" />
-            <element signature="e#419#1239#0" expanded="false" />
+            <element signature="e#1280#6024#0" expanded="false" />
             <element signature="e#6071#7715#0" expanded="false" />
             <element signature="e#8702#9015#0" expanded="false" />
           </folding>
@@ -604,13 +650,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="985">
-          <caret line="169" column="39" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+        <state relative-caret-position="906">
+          <caret line="209" column="0" selection-start-line="138" selection-start-column="3" selection-end-line="209" selection-end-column="0" />
           <folding>
             <element signature="e#237#266#0" expanded="true" />
-            <element signature="e#419#1239#0" expanded="false" />
+            <element signature="e#1280#6024#0" expanded="false" />
             <element signature="e#6071#7715#0" expanded="false" />
             <element signature="e#8702#9015#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui_config_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="e#237#254#0" expanded="true" />
+            <element signature="e#357#1177#0" expanded="false" />
+            <element signature="e#12790#13103#0" expanded="false" />
           </folding>
         </state>
       </provider>
